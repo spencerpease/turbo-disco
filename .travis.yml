@@ -4,5 +4,4 @@ python:
 install:
     - pip install .
 script:
-    - make doctest -C docs/
     - pytest
