@@ -15,7 +15,9 @@ if __name__ == "__main__":
     # with (base_dir / "README.rst").open() as f:
     #     long_description = f.read()
 
-    install_requirements = []
+    install_requirements = [
+        "pytest" # should be in test requirements
+    ]
     interactive_requirements = []
     test_requirements = []
     doc_requirements = []
@@ -45,10 +47,10 @@ if __name__ == "__main__":
         install_requires=install_requirements,
         # tests_require=test_requirements,
         extras_require={
-            # 'docs': doc_requirements,
-            # 'test': test_requirements,
-            # 'interactive': interactive_requirements,
-            # 'dev': doc_requirements + test_requirements + interactive_requirements,
+            'docs': doc_requirements,
+            'test': test_requirements,
+            'interactive': interactive_requirements,
+            'dev': doc_requirements + test_requirements + interactive_requirements,
         },
 
         # This sets up applications
