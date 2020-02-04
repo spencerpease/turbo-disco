@@ -1,7 +1,16 @@
 language: python
 python:
-    - 3.8
+- 3.8
 install:
-    - pip install .
+- pip install .
 script:
-    - pytest -v
+- pytest -v
+deploy:
+  provider: pypi
+  user: __token__
+  password:
+    secure: FzUao3U5msMjq4sUkgOietw3UgPzf1uR7Tt7h+QN5Rg2jjhbubR1o6h20C3kGjZfYkVIzSR8vyU69+/JQOjB/onmL7igBaLMaS5jTpN0uQWIaQYEN9GDHc+Hsi3Qv8k+d1WWI+fCqM0uhBFLmhO1iKFDu0CBjUM4c5g2JpViTpaUl5yOW9MCdHMi8SUcbES/NbC5plDXVTFePTdt8+cM/P/CYNfTOnMyqCUAfjJeAFq5mC+nF1ZK3d0MvAqG6dm8lcZ2JQdWGrH5o/+xsxX86fAAzvi3gfsQrCt/CSuisHomy+qMoFy1ayxVueFXNnZICfjrkHEy6lYzJkZ4qcczp3h5n7wpBfw5qJm8c/bl4PxJW6nxSJyZN40vT3JttsSiziDnTZJo0CzX+kR24HrEjPcVlD/Ef55MPlhNc39SQOsltJ3cCd+SOTQSbduxY4B7LhhahYuPvQ3WynhmK2/4kcHUXo2V0ppISdb5kDTr/3NnD7GGRF7LH4L+3NgX0Fgq+9qxB9FImelest/ffOiSdnLD2x0VCckgwR6vGOhykSv3NQSRYTR62Asko+37ti3tcoEKg439BINMBf9axaN6HmLLATM4F2izoSQCgW07e6uYT5+JDafBmixJbJD5PJUiIolEEOqI5HpfARIRzWWdSbHhGGjI5H9LYw90V4R/ls4=
+  on:
+    distribution: sdist bdist_wheel
+    repo: turbo-disco
+    tags: true

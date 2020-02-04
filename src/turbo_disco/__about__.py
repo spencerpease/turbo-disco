@@ -7,7 +7,7 @@ __title__ = "turbo-disco"
 __summary__ = "Learning how to build pyhon packages"
 __uri__ = ""
 
-__version__ = "1.0.0"
+__version__ = "0.1.0"
 
 __author__ = "Spencer Pease"
 __email__ = "spease@uw.edu"
