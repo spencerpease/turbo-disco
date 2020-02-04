@@ -1,2 +1,0 @@
-# turbo-disco
-Packaging demo
