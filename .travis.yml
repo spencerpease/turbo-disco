@@ -10,6 +10,7 @@ deploy:
   on:
     distribution: sdist bdist_wheel
     repo: spencerpease/turbo-disco
+    branch: master
     tags: true
   user: __token__
   password:
